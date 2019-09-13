@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="#C语言的main函数main函数可以带三个参数：123int main(int argc, char *argv, char *envp)&amp;#123;	&amp;#125; 其中，12argc=argument count；argv=argument vector； 可以在main函数使用1(gdb)b main 进一步来查看是谁调用的编译器先把编译器变成汇编语言，其中assembler的输出就是a.o">
+  <meta name="description" content="#C语言的main函数main函数可以带三个参数：123int main(int argc, char *argv, char *envp)&amp;#123;	&amp;#125; 其中:12argc=argument count；argv=argument vector； 可以在main函数使用1(gdb)b main 进一步来查看是谁调用的编译器先把编译器变成汇编语言，其中assembler的输出就是a.o">
 <meta name="keywords" content="匡 院 之 屑">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pacman_Lcx">
 <meta property="og:url" content="http://lcxrocks.github.io/2019/09/12/icsnote#1/index.html">
 <meta property="og:site_name" content="Pacman_Lcx">
-<meta property="og:description" content="#C语言的main函数main函数可以带三个参数：123int main(int argc, char *argv, char *envp)&amp;#123;	&amp;#125; 其中，12argc=argument count；argv=argument vector； 可以在main函数使用1(gdb)b main 进一步来查看是谁调用的编译器先把编译器变成汇编语言，其中assembler的输出就是a.o">
+<meta property="og:description" content="#C语言的main函数main函数可以带三个参数：123int main(int argc, char *argv, char *envp)&amp;#123;	&amp;#125; 其中:12argc=argument count；argv=argument vector； 可以在main函数使用1(gdb)b main 进一步来查看是谁调用的编译器先把编译器变成汇编语言，其中assembler的输出就是a.o">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-12T08:44:22.632Z">
+<meta property="og:updated_time" content="2019-09-13T06:53:29.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pacman_Lcx">
-<meta name="twitter:description" content="#C语言的main函数main函数可以带三个参数：123int main(int argc, char *argv, char *envp)&amp;#123;	&amp;#125; 其中，12argc=argument count；argv=argument vector； 可以在main函数使用1(gdb)b main 进一步来查看是谁调用的编译器先把编译器变成汇编语言，其中assembler的输出就是a.o">
+<meta name="twitter:description" content="#C语言的main函数main函数可以带三个参数：123int main(int argc, char *argv, char *envp)&amp;#123;	&amp;#125; 其中:12argc=argument count；argv=argument vector； 可以在main函数使用1(gdb)b main 进一步来查看是谁调用的编译器先把编译器变成汇编语言，其中assembler的输出就是a.o">
 
 
 
@@ -336,12 +336,24 @@
                 
               
 
-              <time title="Created: 2019-09-12 16:31:59 / Modified: 16:44:22" itemprop="dateCreated datePublished" datetime="2019-09-12T16:31:59+08:00">2019-09-12</time>
+              <time title="Created: 2019-09-12 16:31:59" itemprop="dateCreated datePublished" datetime="2019-09-12T16:31:59+08:00">2019-09-12</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-09-13 14:53:29" itemprop="dateModified" datetime="2019-09-13T14:53:29+08:00">2019-09-13</time>
               
             
           </span>
@@ -376,17 +388,20 @@
 
       
         <p>#C语言的main函数<br>main函数可以带三个参数：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv, <span class="keyword">char</span> *envp)</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>其中，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">argc=argument count；</span><br><span class="line">argv=argument vector；</span><br></pre></td></tr></table></figure></p>
+<p>其中:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">argc=argument count；</span><br><span class="line">argv=argument vector；</span><br></pre></td></tr></table></figure></p>
 <p>可以在main函数使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(gdb)b main</span><br></pre></td></tr></table></figure></p>
 <p>进一步来查看是谁调用的<br>编译器先把编译器变成汇编语言，其中assembler的输出就是a.out<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#! /bin/bash <span class="comment">//用bash来执行文件</span></span><br><span class="line">echo <span class="string">"Hello world!"</span> <span class="comment">//这个参数被传进bash</span></span><br></pre></td></tr></table></figure></p>
 <p>也可以调用python的解释器<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#! /bin/bash/python  #用bash来执行文件</span><br><span class="line">print(<span class="string">"Hello world!"</span>) #这个参数被传进bash</span><br></pre></td></tr></table></figure></p>
 <p>所以其实bin/cat（或ls或echo）储存了很多工具<br>可以用下面的命令来查看各种小工具的大小<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /usr/bin/ | wc -l</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls - #！/bin/busybox ls</span><br><span class="line">echo - #！/bin/busybox echo</span><br></pre></td></tr></table></figure>
-<p>##C语言的#include</p>
-<p>#”xxx”<br>‘#’叫做预编译指令<br>.c编译出.s，再汇编成.o，再链接成.out<br>大概是去找叫做xxx的文件，然后原封不动贴过来，只是这样而已：找到-贴过来；<br>引号会先搜索当前路径，然后再去其他地方找；</p>
+<h2 id="C语言的-include-预编译"><a href="#C语言的-include-预编译" class="headerlink" title="C语言的#include 预编译"></a>C语言的#include 预编译</h2><p>#”xxx”<br>‘#’叫做预编译指令<br>.c编译出.s，再汇编成.o，再链接成.out<br>大概是去找叫做xxx的文件，然后原封不动贴过来，只是这样而已：找到-贴过来；<br>引号会先搜索当前路径，然后再去其他地方找；</p>
 <p>#<xxx><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __x86_64 不同的体系结构可编译出不同代码</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure></xxx></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gcc -E a.c //条件编译</span><br><span class="line">gcc -S a.c //输出汇编代码</span><br><span class="line">gcc -o a.c //</span><br></pre></td></tr></table></figure>
-<p>提到了“如何搞垮一个online judge”<br>所以预编译器会简单替换，并且可以迭代执行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gcc -E a.c //条件编译</span><br><span class="line">gcc -S a.c //输出汇编代码</span><br><span class="line">gcc -o a.c //输出.o文件</span><br></pre></td></tr></table></figure>
+<p>#提到了“如何搞垮一个online judge”<br>(1)oj killer #1<br>所以预编译器会简单替换，并且可以迭代执行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strlen(&quot;b&quot;&quot;b&quot;&quot;b&quot;&quot;b&quot;)</span><br></pre></td></tr></table></figure></p>
+<p>可以被编译通过，但是表示拼接，那么有什么用呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#define VER &quot;1.0&quot;</span><br><span class="line">printf(&quot;version:&quot; VER);</span><br></pre></td></tr></table></figure></p>
+<p>就不需要（ ）了</p>
+<p>(2)oj killer #2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include&lt;/dev/zero&gt;</span><br></pre></td></tr></table></figure></p>
+<p>##程序的执行<br>#<br>指向代码的指针被强制转换成数据指针，甚至可以把代码的汇编代码读出来。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(((void (*)())p )()</span><br><span class="line"></span><br><span class="line">其中，void (*)是返回类型，紧接着的括号是参数列表</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -470,8 +485,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -515,6 +539,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#C语言的-include-预编译"><span class="nav-number">1.</span> <span class="nav-text">C语言的#include 预编译</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
