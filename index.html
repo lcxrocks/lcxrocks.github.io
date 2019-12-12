@@ -293,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/09/12/icsnote#1/">
+    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/10/10/为什么会有位运算？/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LCX">
@@ -313,7 +313,339 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/09/12/icsnote#1/" class="post-title-link" itemprop="url">Untitled</a>
+                <a href="/2019/10/10/为什么会有位运算？/" class="post-title-link" itemprop="url">Untitled</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-10-10 20:04:23 / Modified: 20:04:24" itemprop="dateCreated datePublished" datetime="2019-10-10T20:04:23+08:00">2019-10-10</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="为什么会有位运算？"><a href="#为什么会有位运算？" class="headerlink" title="为什么会有位运算？"></a>为什么会有位运算？</h1><p>在我们看来，一个 <code>int</code> 类型是物理世界中…, -1, 0, 1, 2, …的表示</p>
+<p>但计算机世界，整数其实是用固定长度的 01 字符串表示的 (回顾数字电路课)，01 字符串天生支持以下操作：</p>
+<ul>
+<li><code>&amp;</code> (与), <code>|</code> (或), <code>~</code> (非)</li>
+<li><code>^</code> (异或)</li>
+<li><code>&lt;&lt;</code> (左移位), <code>&gt;&gt;</code> (右移位)</li>
+</ul>
+<hr>
+<p>习题：用上述位运算和常数实现 4 位整数的加法运算</p>
+<ul>
+<li>提示：使用数字电路中的知识</li>
+<li>进而可以实现乘法、分支 (<code>cond ? a : b</code>)、除法……</li>
+<li>(回顾：计算机系统是状态机，状态机 = 状态存储 + 组合逻辑)</li>
+</ul>
+<blockquote>
+<p>cond可做～cond操作；</p>
+<p>（000&amp;b）｜（111&amp;a）</p>
+<p>（111&amp;a）｜（000&amp;b）</p>
+</blockquote>
+<hr>
+<h1 id="把整数看作-01-字符串"><a href="#把整数看作-01-字符串" class="headerlink" title="把整数看作 01 字符串"></a>把整数看作 01 字符串</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">142857 -&gt; 0000 0000 0000 0010 0010 1110 0000 1001</span><br></pre></td></tr></table></figure>
+<p>一个整数就可以看成是 {0,1,2,\ldots,31}{0,1,2,…,31} 的一个子集 S<em>S</em></p>
+<hr>
+<p>一个整数操作可以并行对其中的所有 01 比特操作</p>
+<ul>
+<li>C++中有 <code>bitset&lt;size&gt;</code>，性能非常可观</li>
+</ul>
+<hr>
+<p>Bitset 实现</p>
+<ul>
+<li>测试是否 x\in S<em>x</em>∈<em>S</em>：<code>(S &gt;&gt; x) &amp; 1</code></li>
+<li>求 <em>S</em>′=<em>S</em>∪<em>x</em>：<code>S | (1 &lt;&lt; x)</code></li>
+<li>习题：求 ∣<em>S</em>∣,<em>S</em>1∪<em>S</em>2,<em>S</em>1∩<em>S</em>2,<em>S</em>1∖<em>S</em>2</li>
+<li>习题：遍历 S<em>S</em> 中的所有元素</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/09/19/icsnote_2/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LCX">
+      <meta itemprop="description" content="垃 圾 人">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pacman_Lcx">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/09/19/icsnote_2/" class="post-title-link" itemprop="url">Untitled</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-09-19 16:04:08 / Modified: 19:35:59" itemprop="dateCreated datePublished" datetime="2019-09-19T16:04:08+08:00">2019-09-19</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Hello-C-world-2"><a href="#Hello-C-world-2" class="headerlink" title="Hello, C world#2"></a>Hello, C world#2</h1><ol>
+<li><p>计算机就是状态机，只不过状态很多</p>
+</li>
+<li><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">intptr t; <span class="comment">//可移植性最强的指针定义</span></span><br><span class="line">(INT_MAX+<span class="number">1</span>); <span class="comment">//+1？0，-1，INT_MIN？ 实际上是undefined behaviour哒！</span></span><br><span class="line"><span class="comment">//为什么会是这样呢？</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>另外，如下代码有什么改进空间呢？<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NREG 4</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NMEM 16</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">uint8_t</span> u8; <span class="comment">// 没用过 uint8_t？</span></span><br><span class="line">u8 pc = <span class="number">0</span>, R[NREG], M[NMEM] = &#123; ... &#125;;</span><br></pre></td></tr></table></figure></p>
+<p>可以尝试给寄存器名字：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NREG 6 <span class="comment">//更新新的寄存器的时候有可能忘记更新最大长度</span></span></span><br><span class="line">u8 R[NREG], pc; <span class="comment">// 有些指令是用寄存器名描述的</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RA 1    <span class="comment">// <span class="doctag">BUG:</span> 数组下标从0开始</span></span></span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<p>但是仍然，很容易出错<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> &#123; RA, RB, ..., PC &#125;; <span class="comment">//等价于#define RA 0 ... #define PC</span></span><br><span class="line">u8 R[] = &#123;</span><br><span class="line">  [RA] = <span class="number">0</span>,  <span class="comment">// 这是什么语法？？</span></span><br><span class="line">  [RB] = <span class="number">0</span>,	 <span class="comment">//自动把第一个当作第一个</span></span><br><span class="line">  ...</span><br><span class="line">  [PC]  = init_pc,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pc (R[PC]) <span class="comment">// 把 PC 也作为寄存器的一部分</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NREG (sizeof(R) / sizeof(u8)) <span class="comment">//数组大小/数组元素大小 但是也有可能出错忘改u8</span></span></span><br></pre></td></tr></table></figure></p>
+<p>总结：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// breaks when adding a register</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NREG 6 <span class="comment">// max&#123;RA, RB, ... PC&#125; == (NREG - 1)</span></span></span><br><span class="line"><span class="comment">// breaks when changing register size</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NREG (sizeof(R) / sizeof(u8))</span></span><br><span class="line"><span class="comment">// never breaks</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NREG (sizeof(R) / sizeof(R[0]))</span></span><br></pre></td></tr></table></figure></p>
+<ol start="3">
+<li>C的tricks</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/09/12/icsnote_1/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LCX">
+      <meta itemprop="description" content="垃 圾 人">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pacman_Lcx">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/09/12/icsnote_1/" class="post-title-link" itemprop="url">Untitled</a>
               
             
           </h1>
@@ -462,7 +794,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/08/20/牛津日记#1/">
+    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/08/20/牛津日记_1/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LCX">
@@ -482,7 +814,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/08/20/牛津日记#1/" class="post-title-link" itemprop="url">Untitled</a>
+                <a href="/2019/08/20/牛津日记_1/" class="post-title-link" itemprop="url">Untitled</a>
               
             
           </h1>
@@ -622,7 +954,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/08/13/牛津日志/">
+    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/05/08/INeedAHug/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LCX">
@@ -642,7 +974,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/08/13/牛津日志/" class="post-title-link" itemprop="url">Untitled</a>
+                <a href="/2019/05/08/INeedAHug/" class="post-title-link" itemprop="url">INeedAHug</a>
               
             
           </h1>
@@ -667,146 +999,7 @@
                 
               
 
-              <time title="Created: 2019-08-13 06:50:31" itemprop="dateCreated datePublished" datetime="2019-08-13T06:50:31+08:00">2019-08-13</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>#8月12日牛津日记</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/05/15/7-TIGF/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LCX">
-      <meta itemprop="description" content="垃 圾 人">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pacman_Lcx">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/15/7-TIGF/" class="post-title-link" itemprop="url">7-TIGF</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-05-15 22:27:06" itemprop="dateCreated datePublished" datetime="2019-05-15T22:27:06+08:00">2019-05-15</time>
+              <time title="Created: 2019-05-08 22:37:12" itemprop="dateCreated datePublished" datetime="2019-05-08T22:37:12+08:00">2019-05-08</time>
             
 
             
@@ -823,7 +1016,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-16 09:29:26" itemprop="dateModified" datetime="2019-05-16T09:29:26+08:00">2019-05-16</time>
+                <time title="Modified: 2019-05-09 18:29:16" itemprop="dateModified" datetime="2019-05-09T18:29:16+08:00">2019-05-09</time>
               
             
           </span>
@@ -859,8 +1052,10 @@
       
         
           
-            <h1 id="Today-I’m-happy"><a href="#Today-I’m-happy" class="headerlink" title="Today I’m happy."></a>Today I’m happy.</h1><h2 id="I’m-grateful-that-I-finished-on-eof-my-OJ-question"><a href="#I’m-grateful-that-I-finished-on-eof-my-OJ-question" class="headerlink" title="I’m grateful that I finished on eof my OJ question."></a>I’m grateful that I finished on eof my OJ question.</h2><h2 id="I’m-thankful-that-I-used-some-of-my-time-to-review-for-the-lessons"><a href="#I’m-thankful-that-I-used-some-of-my-time-to-review-for-the-lessons" class="headerlink" title="I’m thankful that I used some of my time to review for the lessons."></a>I’m thankful that I used some of my time to review for the lessons.</h2><p>which means that I have controlled myself well.</p>
-<h2 id="I’m-glad-that-everthing-is-in-control"><a href="#I’m-glad-that-everthing-is-in-control" class="headerlink" title="I’m glad that everthing is in control."></a>I’m glad that everthing is in control.</h2><p>And everything work out as planned. </p>
+            <h1 id="我好像莫名其妙的很难过"><a href="#我好像莫名其妙的很难过" class="headerlink" title="我好像莫名其妙的很难过"></a>我好像莫名其妙的很难过</h1><p>头一次有这种奇妙的感觉，说不出来为什么很难过但就是不开心；然后今天又突然意识到自己好像有时候会有意无意的在向周围辐射负能量，还挺损人不利己的，大概找一下原因吧</p>
+<h2 id="没注意网课？"><a href="#没注意网课？" class="headerlink" title="没注意网课？"></a>没注意网课？</h2><p>倒不是，重修就重修好咯，这个又不会影响什么东西，而且其实我觉得还有一丝转机；</p>
+<h2 id="成绩提高不上去？"><a href="#成绩提高不上去？" class="headerlink" title="成绩提高不上去？"></a>成绩提高不上去？</h2><p>都到大学了怎么还因为这种东西伤心，好好努力会有结果的，我觉得也不是因为这个；</p>
+<h2 id="怅然若失？"><a href="#怅然若失？" class="headerlink" title="怅然若失？"></a>怅然若失？</h2><p>这个可能有点概括，所以有可能不开心是因为这个，但并不能说明什么问题呀，任何人失去什么都会不开心，任何人不开心都是因为失去了什么。那我失去了什么呢？</p>
 
           
         
@@ -917,7 +1112,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/05/14/6-TIGF/">
+    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/01/18/Begin/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LCX">
@@ -937,7 +1132,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/05/14/6-TIGF/" class="post-title-link" itemprop="url">6-TIGF</a>
+                <a href="/2019/01/18/Begin/" class="post-title-link" itemprop="url">Begin!</a>
               
             
           </h1>
@@ -962,25 +1157,9 @@
                 
               
 
-              <time title="Created: 2019-05-14 08:50:43" itemprop="dateCreated datePublished" datetime="2019-05-14T08:50:43+08:00">2019-05-14</time>
+              <time title="Created: 2019-01-18 15:50:14" itemprop="dateCreated datePublished" datetime="2019-01-18T15:50:14+08:00">2019-01-18</time>
             
 
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-05-16 09:26:48" itemprop="dateModified" datetime="2019-05-16T09:26:48+08:00">2019-05-16</time>
-              
             
           </span>
 
@@ -1015,758 +1194,8 @@
       
         
           
-            <h1 id="I-don’t-feel-very-well-today"><a href="#I-don’t-feel-very-well-today" class="headerlink" title="I don’t feel very well today."></a>I don’t feel very well today.</h1><h2 id="Because-today-is-Tuesday"><a href="#Because-today-is-Tuesday" class="headerlink" title="Because today is Tuesday."></a>Because today is Tuesday.</h2><p>And I think the courses on tuesday are dull and not worth listening to. I think taking those courses is a waste of time. I don’t like wasting my time.</p>
-<h2 id="The-weather-is-not-so-good"><a href="#The-weather-is-not-so-good" class="headerlink" title="The weather is not so good."></a>The weather is not so good.</h2><h2 id="I’m-not-so-efficient"><a href="#I’m-not-so-efficient" class="headerlink" title="I’m not so efficient."></a>I’m not so efficient.</h2><p>However I think I finished something after all. I finished watching Game of Thrones s8e5, whose plot is totally beyond my imagination.</p>
+            <p>大一上半学期结束了！<br>话说我好想睡觉啊</p>
 
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/05/13/5-TIGF/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LCX">
-      <meta itemprop="description" content="垃 圾 人">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pacman_Lcx">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/13/5-TIGF/" class="post-title-link" itemprop="url">#5 Things I'm Grateful For</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-05-13 21:54:44 / Modified: 22:23:12" itemprop="dateCreated datePublished" datetime="2019-05-13T21:54:44+08:00">2019-05-13</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Today-I-feel-a-little-depressed"><a href="#Today-I-feel-a-little-depressed" class="headerlink" title="Today I feel a little depressed."></a>Today I feel a little depressed.</h1><h2 id="The-weather-is-terrible"><a href="#The-weather-is-terrible" class="headerlink" title="The weather is terrible."></a>The weather is terrible.</h2><p>It’s hot in the morning and raining in the afternoon.</p>
-<h2 id="I-was-rejected-by-a-professor"><a href="#I-was-rejected-by-a-professor" class="headerlink" title="I was rejected by a professor."></a>I was rejected by a professor.</h2><p>So I’ll have to re-study a course that I missed in this term.</p>
-<h2 id="I-attended-a-lecture-which-is-about-romantic-relationship"><a href="#I-attended-a-lecture-which-is-about-romantic-relationship" class="headerlink" title="I attended a lecture which is about romantic relationship."></a>I attended a lecture which is about romantic relationship.</h2><p>It has taught me a lot about how to keep a romantic relationship.</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/05/12/4-TIGF/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LCX">
-      <meta itemprop="description" content="垃 圾 人">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pacman_Lcx">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/12/4-TIGF/" class="post-title-link" itemprop="url">#4 Things I'm Grateful For</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-05-12 21:01:47" itemprop="dateCreated datePublished" datetime="2019-05-12T21:01:47+08:00">2019-05-12</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-05-13 22:23:01" itemprop="dateModified" datetime="2019-05-13T22:23:01+08:00">2019-05-13</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Today-I-feel-normal"><a href="#Today-I-feel-normal" class="headerlink" title="Today I feel normal."></a>Today I feel normal.</h1><h2 id="I-think-I-could-have-done-better-in-the-physics-examination"><a href="#I-think-I-could-have-done-better-in-the-physics-examination" class="headerlink" title="I think I could have done better in the physics examination."></a>I think I could have done better in the physics examination.</h2><p>Well, it doesn’t matter. I ca try harder next time.</p>
-<h2 id="The-weather-is-not-so-well"><a href="#The-weather-is-not-so-well" class="headerlink" title="The weather is not so well."></a>The weather is not so well.</h2><h2 id="Our-dormitory-went-out-to-have-dinner"><a href="#Our-dormitory-went-out-to-have-dinner" class="headerlink" title="Our dormitory went out to have dinner."></a>Our dormitory went out to have dinner.</h2><p>Which doesn’t happen frequently.</p>
-<h2 id="I-did-nothing-in-the-evening"><a href="#I-did-nothing-in-the-evening" class="headerlink" title="I did nothing in the evening."></a>I did nothing in the evening.</h2><p>In anotehr word, I relaxed myself completely.</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/05/11/3-TIGF/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LCX">
-      <meta itemprop="description" content="垃 圾 人">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pacman_Lcx">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/11/3-TIGF/" class="post-title-link" itemprop="url">#3 Things I'm Grateful For</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-05-11 19:26:01" itemprop="dateCreated datePublished" datetime="2019-05-11T19:26:01+08:00">2019-05-11</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-05-13 22:22:44" itemprop="dateModified" datetime="2019-05-13T22:22:44+08:00">2019-05-13</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Today-I’m-happy"><a href="#Today-I’m-happy" class="headerlink" title="Today I’m happy."></a>Today I’m happy.</h1><h2 id="My-mother-received-my-flower"><a href="#My-mother-received-my-flower" class="headerlink" title="My mother received my flower."></a>My mother received my flower.</h2><p>I think she is very happy, however, as I expected. She thinks I’m wasting my money. And just like what I mentioned in my letter, I don’t think that’s a waste. One needs to have a littl ceremony in life.</p>
-<h2 id="I-studied-for-a-long-time"><a href="#I-studied-for-a-long-time" class="headerlink" title="I studied for a long time."></a>I studied for a long time.</h2><p>I finished my Problem Solving homework, and I reviewed physics thoroughly. I have done all the sample examinations our teacher provided. With this in mind, I hope that I can do well in tomorrow’s physics examination.</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/05/10/2-TIGF/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LCX">
-      <meta itemprop="description" content="垃 圾 人">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pacman_Lcx">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/10/2-TIGF/" class="post-title-link" itemprop="url">#2 Things I'm Grateful For</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-05-10 19:18:02 / Modified: 19:18:09" itemprop="dateCreated datePublished" datetime="2019-05-10T19:18:02+08:00">2019-05-10</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Today-I’m-happy"><a href="#Today-I’m-happy" class="headerlink" title="Today I’m happy."></a>Today I’m happy.</h1><h2 id="Weather-is-good"><a href="#Weather-is-good" class="headerlink" title="Weather is good."></a>Weather is good.</h2><h2 id="Had-a-joyful-conversation-with-my-gf"><a href="#Had-a-joyful-conversation-with-my-gf" class="headerlink" title="Had a joyful conversation with my gf."></a>Had a joyful conversation with my gf.</h2><p>I’ve been a lousy boyfriend. In fact I’m such a terrible boyfriend that my girlfriend cried twice because of me. I’ll try to improve myself as a qualified boyfriend.</p>
-<h2 id="Went-out-to-buy-myself-a-culp-of-juice"><a href="#Went-out-to-buy-myself-a-culp-of-juice" class="headerlink" title="Went out to buy myself a culp of juice."></a>Went out to buy myself a culp of juice.</h2><p>Not so delicious, but I feel glad.</p>
-<h2 id="Got-myself-the-opportunity-to-Exchange-Program-in-Hertford-Oxford"><a href="#Got-myself-the-opportunity-to-Exchange-Program-in-Hertford-Oxford" class="headerlink" title="Got myself the opportunity to Exchange Program in Hertford (Oxford)."></a>Got myself the opportunity to Exchange Program in Hertford (Oxford).</h2><p>My rank is pretty high among the candidates, which makes me realize that maybe I have some advantages after all.</p>
-<h2 id="Next-I’m-going-to-study-cs-and-physics"><a href="#Next-I’m-going-to-study-cs-and-physics" class="headerlink" title="Next I’m going to study cs and physics."></a>Next I’m going to study cs and physics.</h2>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/05/09/1-Things-I-m-Grateful-For/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LCX">
-      <meta itemprop="description" content="垃 圾 人">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pacman_Lcx">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/09/1-Things-I-m-Grateful-For/" class="post-title-link" itemprop="url">#1 Things I'm Grateful For </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-05-09 12:46:31 / Modified: 18:53:32" itemprop="dateCreated datePublished" datetime="2019-05-09T12:46:31+08:00">2019-05-09</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="I’m-happy-today"><a href="#I’m-happy-today" class="headerlink" title=" I’m happy today."></a><font color="red"> I’m happy today.</font></h1><h2 id="Weather-is-good"><a href="#Weather-is-good" class="headerlink" title=" Weather is good. "></a><font color="red"> Weather is good. </font></h2><p>I’m always happy when the weather is fine, and sad when it’s not.</p>
-<h2 id="I-answered-some-question-voluntarily-on-the-Problem-Solving-class"><a href="#I-answered-some-question-voluntarily-on-the-Problem-Solving-class" class="headerlink" title=" I answered some question voluntarily on the Problem Solving class.}"></a><font color="red"> I answered some question voluntarily on the Problem Solving class.</font>}</h2><p>I don’t usually do that. In fact, few people do that. However, I did it today.</p>
-<h2 id="I-went-out-and-bought-myself-a-cup-of-milk-tea-then-I-had-a-nice-meal"><a href="#I-went-out-and-bought-myself-a-cup-of-milk-tea-then-I-had-a-nice-meal" class="headerlink" title=" I went out and bought myself a cup of milk tea, then I had a nice meal. "></a><font color="red"> I went out and bought myself a cup of milk tea, then I had a nice meal. </font></h2><p>I have a sweet tooth, so that I bought myself a cup of milk tea as a reward. I had noodles for dinner. And it tasted good.</p>
-<h2 id="Why-do-I-write-log-like-a-child"><a href="#Why-do-I-write-log-like-a-child" class="headerlink" title=" Why do I write log like a child?"></a><font color="red"> Why do I write log like a child?</font></h2><p>Write spetacular words needs time and energy. I’m quite reluctant to consume my mind. So this log may read like a child’s work.</p>
-<h2 id="If-I-can-go-over-my-physics-and-finish-my-homework-I-will-be-super-happy"><a href="#If-I-can-go-over-my-physics-and-finish-my-homework-I-will-be-super-happy" class="headerlink" title=" If I can go over my physics and finish my homework, I will be super happy."></a><font color="red"> If I can go over my physics and finish my homework, I will be super happy.</font></h2>
           
         
       
@@ -1810,10 +1239,6 @@
   </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
-
 
 
           </div>
@@ -1854,7 +1279,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

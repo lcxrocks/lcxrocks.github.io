@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="#C语言的main函数main函数可以带三个参数：123int main(int argc, char *argv, char *envp)&amp;#123;	&amp;#125; 其中:12argc=argument count；argv=argument vector； 可以在main函数使用1(gdb)b main 进一步来查看是谁调用的编译器先把编译器变成汇编语言，其中assembler的输出就是a.o">
+  <meta name="description" content="Hello, C world#2 计算机就是状态机，只不过状态很多  123intptr t; //可移植性最强的指针定义(INT_MAX+1); //+1？0，-1，INT_MIN？ 实际上是undefined behaviour哒！//为什么会是这样呢？   另外，如下代码有什么改进空间呢？12345#include &amp;lt;stdint.h&amp;gt;#define NREG 4#define">
 <meta name="keywords" content="匡 院 之 屑">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pacman_Lcx">
-<meta property="og:url" content="http://lcxrocks.github.io/2019/09/12/icsnote#1/index.html">
+<meta property="og:url" content="http://lcxrocks.github.io/2019/09/19/icsnote_2/index.html">
 <meta property="og:site_name" content="Pacman_Lcx">
-<meta property="og:description" content="#C语言的main函数main函数可以带三个参数：123int main(int argc, char *argv, char *envp)&amp;#123;	&amp;#125; 其中:12argc=argument count；argv=argument vector； 可以在main函数使用1(gdb)b main 进一步来查看是谁调用的编译器先把编译器变成汇编语言，其中assembler的输出就是a.o">
+<meta property="og:description" content="Hello, C world#2 计算机就是状态机，只不过状态很多  123intptr t; //可移植性最强的指针定义(INT_MAX+1); //+1？0，-1，INT_MIN？ 实际上是undefined behaviour哒！//为什么会是这样呢？   另外，如下代码有什么改进空间呢？12345#include &amp;lt;stdint.h&amp;gt;#define NREG 4#define">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-13T06:53:29.047Z">
+<meta property="og:updated_time" content="2019-09-19T11:35:59.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pacman_Lcx">
-<meta name="twitter:description" content="#C语言的main函数main函数可以带三个参数：123int main(int argc, char *argv, char *envp)&amp;#123;	&amp;#125; 其中:12argc=argument count；argv=argument vector； 可以在main函数使用1(gdb)b main 进一步来查看是谁调用的编译器先把编译器变成汇编语言，其中assembler的输出就是a.o">
+<meta name="twitter:description" content="Hello, C world#2 计算机就是状态机，只不过状态很多  123intptr t; //可移植性最强的指针定义(INT_MAX+1); //+1？0，-1，INT_MIN？ 实际上是undefined behaviour哒！//为什么会是这样呢？   另外，如下代码有什么改进空间呢？12345#include &amp;lt;stdint.h&amp;gt;#define NREG 4#define">
 
 
 
 
 
 
-  <link rel="canonical" href="http://lcxrocks.github.io/2019/09/12/icsnote#1/">
+  <link rel="canonical" href="http://lcxrocks.github.io/2019/09/19/icsnote_2/">
 
 
 
@@ -293,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/09/12/icsnote#1/">
+    <link itemprop="mainEntityOfPage" href="http://lcxrocks.github.io/2019/09/19/icsnote_2/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LCX">
@@ -336,24 +336,12 @@
                 
               
 
-              <time title="Created: 2019-09-12 16:31:59" itemprop="dateCreated datePublished" datetime="2019-09-12T16:31:59+08:00">2019-09-12</time>
+              <time title="Created: 2019-09-19 16:04:08 / Modified: 19:35:59" itemprop="dateCreated datePublished" datetime="2019-09-19T16:04:08+08:00">2019-09-19</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-09-13 14:53:29" itemprop="dateModified" datetime="2019-09-13T14:53:29+08:00">2019-09-13</time>
               
             
           </span>
@@ -387,21 +375,19 @@
       
 
       
-        <p>#C语言的main函数<br>main函数可以带三个参数：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv, <span class="keyword">char</span> *envp)</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>其中:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">argc=argument count；</span><br><span class="line">argv=argument vector；</span><br></pre></td></tr></table></figure></p>
-<p>可以在main函数使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(gdb)b main</span><br></pre></td></tr></table></figure></p>
-<p>进一步来查看是谁调用的<br>编译器先把编译器变成汇编语言，其中assembler的输出就是a.out<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#! /bin/bash <span class="comment">//用bash来执行文件</span></span><br><span class="line">echo <span class="string">"Hello world!"</span> <span class="comment">//这个参数被传进bash</span></span><br></pre></td></tr></table></figure></p>
-<p>也可以调用python的解释器<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#! /bin/bash/python  #用bash来执行文件</span><br><span class="line">print(<span class="string">"Hello world!"</span>) #这个参数被传进bash</span><br></pre></td></tr></table></figure></p>
-<p>所以其实bin/cat（或ls或echo）储存了很多工具<br>可以用下面的命令来查看各种小工具的大小<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /usr/bin/ | wc -l</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls - #！/bin/busybox ls</span><br><span class="line">echo - #！/bin/busybox echo</span><br></pre></td></tr></table></figure>
-<h2 id="C语言的-include-预编译"><a href="#C语言的-include-预编译" class="headerlink" title="C语言的#include 预编译"></a>C语言的#include 预编译</h2><p>#”xxx”<br>‘#’叫做预编译指令<br>.c编译出.s，再汇编成.o，再链接成.out<br>大概是去找叫做xxx的文件，然后原封不动贴过来，只是这样而已：找到-贴过来；<br>引号会先搜索当前路径，然后再去其他地方找；</p>
-<p>#<xxx><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __x86_64 不同的体系结构可编译出不同代码</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure></xxx></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gcc -E a.c //条件编译</span><br><span class="line">gcc -S a.c //输出汇编代码</span><br><span class="line">gcc -o a.c //输出.o文件</span><br></pre></td></tr></table></figure>
-<p>#提到了“如何搞垮一个online judge”<br>(1)oj killer #1<br>所以预编译器会简单替换，并且可以迭代执行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strlen(&quot;b&quot;&quot;b&quot;&quot;b&quot;&quot;b&quot;)</span><br></pre></td></tr></table></figure></p>
-<p>可以被编译通过，但是表示拼接，那么有什么用呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#define VER &quot;1.0&quot;</span><br><span class="line">printf(&quot;version:&quot; VER);</span><br></pre></td></tr></table></figure></p>
-<p>就不需要（ ）了</p>
-<p>(2)oj killer #2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include&lt;/dev/zero&gt;</span><br></pre></td></tr></table></figure></p>
-<p>##程序的执行<br>#<br>指向代码的指针被强制转换成数据指针，甚至可以把代码的汇编代码读出来。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(((void (*)())p )()</span><br><span class="line"></span><br><span class="line">其中，void (*)是返回类型，紧接着的括号是参数列表</span><br></pre></td></tr></table></figure></p>
+        <h1 id="Hello-C-world-2"><a href="#Hello-C-world-2" class="headerlink" title="Hello, C world#2"></a>Hello, C world#2</h1><ol>
+<li><p>计算机就是状态机，只不过状态很多</p>
+</li>
+<li><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">intptr t; <span class="comment">//可移植性最强的指针定义</span></span><br><span class="line">(INT_MAX+<span class="number">1</span>); <span class="comment">//+1？0，-1，INT_MIN？ 实际上是undefined behaviour哒！</span></span><br><span class="line"><span class="comment">//为什么会是这样呢？</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>另外，如下代码有什么改进空间呢？<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NREG 4</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NMEM 16</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">uint8_t</span> u8; <span class="comment">// 没用过 uint8_t？</span></span><br><span class="line">u8 pc = <span class="number">0</span>, R[NREG], M[NMEM] = &#123; ... &#125;;</span><br></pre></td></tr></table></figure></p>
+<p>可以尝试给寄存器名字：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NREG 6 <span class="comment">//更新新的寄存器的时候有可能忘记更新最大长度</span></span></span><br><span class="line">u8 R[NREG], pc; <span class="comment">// 有些指令是用寄存器名描述的</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RA 1    <span class="comment">// <span class="doctag">BUG:</span> 数组下标从0开始</span></span></span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<p>但是仍然，很容易出错<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> &#123; RA, RB, ..., PC &#125;; <span class="comment">//等价于#define RA 0 ... #define PC</span></span><br><span class="line">u8 R[] = &#123;</span><br><span class="line">  [RA] = <span class="number">0</span>,  <span class="comment">// 这是什么语法？？</span></span><br><span class="line">  [RB] = <span class="number">0</span>,	 <span class="comment">//自动把第一个当作第一个</span></span><br><span class="line">  ...</span><br><span class="line">  [PC]  = init_pc,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pc (R[PC]) <span class="comment">// 把 PC 也作为寄存器的一部分</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NREG (sizeof(R) / sizeof(u8)) <span class="comment">//数组大小/数组元素大小 但是也有可能出错忘改u8</span></span></span><br></pre></td></tr></table></figure></p>
+<p>总结：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// breaks when adding a register</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NREG 6 <span class="comment">// max&#123;RA, RB, ... PC&#125; == (NREG - 1)</span></span></span><br><span class="line"><span class="comment">// breaks when changing register size</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NREG (sizeof(R) / sizeof(u8))</span></span><br><span class="line"><span class="comment">// never breaks</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NREG (sizeof(R) / sizeof(R[0]))</span></span><br></pre></td></tr></table></figure></p>
+<ol start="3">
+<li>C的tricks</li>
+</ol>
 
       
     </div>
@@ -432,7 +418,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/20/牛津日记#1/" rel="next" title="">
+              <a href="/2019/09/12/icsnote_1/" rel="next" title="">
                 <i class="fa fa-chevron-left"></i> 
               </a>
             
@@ -441,6 +427,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/10/为什么会有位运算？/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -510,7 +500,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -550,7 +540,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#C语言的-include-预编译"><span class="nav-number">1.</span> <span class="nav-text">C语言的#include 预编译</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hello-C-world-2"><span class="nav-number">1.</span> <span class="nav-text">Hello, C world#2</span></a></li></ol></div>
             
 
           </div>
