@@ -9,7 +9,7 @@ profile:
   image: hkd.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>chunxu@smail.nju.edu.cn</p>
+    <p>chunxu.liu@smail.nju.edu.cn</p>
 
 news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
