@@ -18,7 +18,7 @@ social: false # includes social icons at the bottom of the page
 
 ### About Me
 
-I am currently a PhD student in Nanjing University Media Computing Group, where I can have the chance to work under the supervision of Prof. Limin Wang. My research interests include computer vision backbone, multimodal model pretrain and low-level video processing. Prior to my PhD life, I completed my undergraduate studies in Kuang Yaming Honor School, Nanjing University.
+I am currently a PhD student in Nanjing University Media Computing Group, under the supervision of Prof. Limin Wang. My research focuses on multimodality models and low-level video processing. Prior to my PhD life, I completed my undergraduate studies in Kuang Yaming Honor School, Nanjing University.
 
 ### Education
 
@@ -27,6 +27,5 @@ I am currently a PhD student in Nanjing University Media Computing Group, where 
 
 ### Interests
 
-- Language-Vision Models
-- Image/Video Recognition
+- Vision-Language Models
 - Video Frame Interpolation

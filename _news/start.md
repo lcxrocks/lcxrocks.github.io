@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Code released for SGM-VFI [CVPR 2024]. See `Publications` for details.
+Code released for [SGM-VFI](https://sgm-vfi.github.io/) [CVPR 2024]. See `Publications` for details.
