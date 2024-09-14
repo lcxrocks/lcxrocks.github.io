@@ -29,3 +29,7 @@ I am currently a PhD student in Nanjing University Media Computing Group, under 
 
 - Vision-Language Models
 - Video Frame Interpolation
+
+### Internship
+
+- Sensetime Research, 2023.8 - now
