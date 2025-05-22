@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Integrated HuggingFace support for [VFIMamba](https://sgm-vfi.github.io/) [NeurIPS 2024].
+Integrated HuggingFace support for [VFIMamba](https://github.com/MCG-NJU/VFIMamba) [NeurIPS 2024].
