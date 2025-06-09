@@ -27,7 +27,7 @@ I am currently a PhD student in Nanjing University Media Computing Group, under 
 
 ### Interests
 
-- Vision-Language Models
+- Vision-Language Models and Representations
 - Video Frame Interpolation
 
 ### Internship
