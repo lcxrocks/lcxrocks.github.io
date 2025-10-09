@@ -29,6 +29,16 @@ jobs:
               "giscus.repo": "${{ github.repository }}",
               "baseurl": ""
             }
+
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+
+      - name: Ensure convert alias (for ImageMagick 7)
+        run: |
+          if command -v magick >/dev/null 2>&1 && ! command -v convert >/dev/null 2>&1; then
+            sudo ln -s "$(which magick)" /usr/local/bin/convert || true
+          fi
+
       - name: Install and Build 🔧
         run: |
           pip3 install --upgrade jupyter
