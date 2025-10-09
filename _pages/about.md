@@ -18,7 +18,7 @@ social: false # includes social icons at the bottom of the page
 
 ### About Me
 
-I am currently a PhD student in Nanjing University Media Computing Group, under the supervision of Prof. Limin Wang. My research focuses on multimodality models and low-level video processing. Prior to my PhD life, I completed my undergraduate studies in Kuang Yaming Honor School, Nanjing University.
+I am currently a PhD student in Nanjing University Media Computing Group, under the supervision of Prof. Limin Wang. My research focuses on multimodality models. Prior to my PhD life, I completed my undergraduate studies in Kuang Yaming Honor School, Nanjing University.
 
 ### Education
 
