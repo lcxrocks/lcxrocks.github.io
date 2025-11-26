@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-We developed a new MLLM Embedding, named **R**easoning **G**uided **E**mbedding (**RGE**). Code is released at [github](https://huggingface.co/lcxrocks/RGE).
+We developed a new MLLM Embedding, named **R**easoning **G**uided **E**mbedding (**RGE**). Code is released at [github](https://github.com/MCG-NJU/RGE).
